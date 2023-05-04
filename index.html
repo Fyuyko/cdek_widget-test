@@ -2,12 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vue_modules/dist/assets/index-bd793bb9.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=88398772-1a4b-4234-b8b9-b3dacf1b135e&lang=ru_RU" type="text/javascript"></script>
     <title>Vite App</title>
   </head>
   <body>
+
+    <div class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div>Шапка сайта</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="cart">
+      <div class="container">
+        <div class="cart__inner">
+
+          <h1 class="cart__title">Корзина</h1>
+
+          <div class="cart__products products">
+            <ul class="products__list">
+              <li class="products__list-item">Это продукт</li>
+              <li class="products__list-item">Это продукт</li>
+              <li class="products__list-item">Это продукт</li>
+            </ul>
+          </div>
+
+          <div class="cart__form">
+            <h2 class="cart__form-title">Контактная информация</h2>
+            <form class="cart__form-inner form">
+              <input type="text" value="" placeholder="Ваше имя"/>
+              <input type="text" value="" placeholder="Телефон"/>
+              <input type="email" value="" placeholder="Email"/>
+            </form>
+          </div>
+
+          <div class="cart__delivery">
+            <h2 class="cart__delivery-title">Выберите способ доставки</h2>
+
+            <div class="cart__delivery-variation delivery-variation">
+              <div class="delivery-variation__buttons">
+                <button class="delivery-variation__buttons-item" data-delivery="cdek">
+                  До пункта выдачи СДЭК
+                </button>
+                <button class="delivery-variation__buttons-item" data-delivery="address">
+                  По адресу
+                </button>
+              </div>
+
+              <div class="delivery-variation__input">
+                <div class="delivery-variation__input-item active" data-input="cdek">
+                  <input id="deliveryPost" data-yandex-key="88398772-1a4b-4234-b8b9-b3dacf1b135e" type="text" name="cdek" value="" placeholder="Введите адрес пункта СДЕК">
+                </div>
+                <div class="delivery-variation__input-item" data-input="address">
+                  <input type="text" name="delivery" value="" placeholder="Введите адрес доставки">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div>Подвал сайта</div>
+        </div>
+      </div>
+    </div>
+
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
+    <script src="./vue_modules/dist/assets/index-8dd0c0f6.js"></script>
   </body>
 </html>
